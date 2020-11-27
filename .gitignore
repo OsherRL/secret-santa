@@ -9,3 +9,7 @@ venv/*
 
 # Ignore pycache folder.
 __pycache__
+
+# Setup files
+participants.csv
+participants_test.csv
