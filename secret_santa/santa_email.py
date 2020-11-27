@@ -9,16 +9,13 @@ GIVER_TAG: str = '<giver>'
 RECEIVER_TAG: str = '<receiver>'
 
 # Create the plain-text and HTML version of your message
-email_template: str = """
-Hi <giver>,
-
-Thanks for taking part in our secret santa!
-
-You will be choosing a gift for <receiver>.
-
-Remember, the budget is £5.
-
-Choose wisely!"""
+email_template: str = (
+    'Hi <giver>,\n\n'
+    'Thanks for taking part in our secret santa!\n\n'
+    'You will be choosing a gift for <receiver>.\n\n'
+    'Remember, the budget is £5.\n\n'
+    'Choose wisely!'
+)
 
 
 def email_santa_pairing(
@@ -61,5 +58,5 @@ def email_santa_pairing(
         server.sendmail(
             organiser_email,
             santa_pairing.giver.email,
-            santa_message.as_string()
+            santa_message.as_bytes()
         )
