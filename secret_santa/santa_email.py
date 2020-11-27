@@ -60,6 +60,6 @@ def email_santa_pairing(
         server.login(organiser_email, organiser_password)
         server.sendmail(
             organiser_email,
-            santa_pairing.receiver.email,
+            santa_pairing.giver.email,
             santa_message.as_string()
         )
